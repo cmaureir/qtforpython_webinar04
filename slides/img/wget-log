@@ -1,0 +1,12 @@
+--2022-06-15 23:36:46--  https://www.qt.io/hs-fs/hubfs/qtforpython_packages.png?width=474
+Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
+Resolving www.qt.io (www.qt.io)... 199.60.103.225, 199.60.103.31, 2606:2c40::c73c:671f, ...
+Connecting to www.qt.io (www.qt.io)|199.60.103.225|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 13638 (13K) [image/png]
+Saving to: ‘qtforpython_packages.png?width=474’
+
+qtforpython_packages.png?width=474                            0%[                                                                                                                                         ]       0  --.-KB/s               qtforpython_packages.png?width=474                          100%[========================================================================================================================================>]  13.32K  --.-KB/s    in 0s      
+
+2022-06-15 23:36:47 (37.2 MB/s) - ‘qtforpython_packages.png?width=474’ saved [13638/13638]
+

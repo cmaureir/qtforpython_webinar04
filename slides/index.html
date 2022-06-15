@@ -78,23 +78,36 @@
 
       <section>
         <h3>Pre-requisites</h3>
-        no Qt installation
-        (recommendable) python environment
+        <ul>
+          <li>✅a newer Python version 3.7+</li>
+          <li>✅an isolated virtual enviromnent.</li>
+          <li>❌Qt installation</li>
+        </ul>
       </section>
 
       <section>
         <h3>Installation (OSS)</h3>
-        animation
+        <img src="img/pyside6-1.gif" />
+      </section>
+
       </section>
 
       <section>
         <h3>Installation (Commercial)</h3>
-        animation
+        <img src="img/account_qt_io.png" />
+        <pre style="font-size: 40%;width: 100%;"><code class="python" data-trim data-noescape>
+        # Remember to activate the enviroment!
+        pip install *.whl
+        </code></pre>
       </section>
 
       <section>
         <h3>Installation (Other options)</h3>
-        animation
+        <ul>
+          <li>macOS: brew</li>
+          <li>linux: apt, dnf, pacman, etc...</li>
+          <li>all: conda
+        </ul>
       </section>
 
       <section>
@@ -103,11 +116,17 @@
 
       <section>
         <h3>Qt Creator</h3>
+        <img src="img/qtcreator8.png" />
       </section>
 
       <section>
-        <h3>Other IDEs</h3>
-        important to select the interpreter
+        <h3>Other IDEs (1/2)</h3>
+        <img src="img/vscode.png" />
+      </section>
+
+      <section>
+        <h3>Other IDEs (2/2)</h3>
+        <img src="img/pycharm.png" />
       </section>
 
       <section>
@@ -116,10 +135,26 @@
 
       <section>
         <h3>Qt Quick</h3>
+        <div id="left">
+          <pre style="font-size: 40%;width: 100%;"><code class="python" data-trim data-noescape>
+          </code></pre>
+        </div>
+        <div id="right">
+          <pre style="font-size: 40%;width: 100%;"><code class="python" data-trim data-noescape>
+          </code></pre>
+        </div>
       </section>
 
       <section>
         <h3>Qt Widgets</h3>
+        <div id="left">
+          <pre style="font-size: 40%;width: 100%;"><code class="python" data-trim data-noescape>
+          </code></pre>
+        </div>
+        <div id="right">
+          <pre style="font-size: 40%;width: 100%;"><code class="python" data-trim data-noescape>
+          </code></pre>
+        </div>
       </section>
 
       <section>
@@ -129,14 +164,17 @@
 
       <section>
         <h3>Widgets designer</h3>
+        <img src="img/designer.png" />
       </section>
 
       <section>
         <h3>pyside6-project</h3>
+        <img src="img/pyside6-project.gif" />
       </section>
 
       <section>
         <h3>QtDS</h3>
+        <img src="img/qtds.png" />
       </section>
 
       <section>
@@ -308,11 +346,6 @@
       </section>
 
       <section>
-        <h3>New package structure (3/4)</h3>
-        <img src="img/pyside6-1.gif" />
-      </section>
-
-      <section>
         <h3>New package structure (4/4)</h3>
         <ul>
           <li>M2M Protocol modules wheel</li>
@@ -417,66 +450,6 @@
       <section>
         <h3>Bridge to other Python modules (2/2)</h3>
         <video muted data-autoplay src="videos/pyside_matplotlib.mp4"></video>
-      </section>
-
-      <section>
-      <h3>"Pythonizing" Qt 🐍</h3>
-        <div class="container">
-          <div class="fragment" style="float: left; width: 30%;">
-            <pre style="font-size: 40%;width: 100%;"><code class="python" data-trim data-noescape>
-            # Common Qt structure
-            # - Using setter/getter
-            # - No writable properties
-
-            table = QTableWidget()
-            table.setColumnCount(2)
-
-            button = QPushButton("Add")
-            button.setEnabled(False)
-
-            layout = QVBoxLayout()
-            layout.addWidget(table)
-            layout.addWidget(button)
-            layout.setSpacing(2)
-            </code></pre>
-          </div>
-          <div class="fragment" style="display: inline-block;width:30%;">
-            <pre style="font-size: 40%;width: 100%;"><code class="python" data-trim data-noescape>
-            from __feature__ import (
-              snake_case
-            )
-
-            table = QTableWidget()
-            table.set_column_count(2)
-
-            button = QPushButton("Add")
-            button.set_enabled(False)
-
-            layout = QVBoxLayout()
-            layout.add_widget(table)
-            layout.add_widget(button)
-            layout.set_spacing(2)
-            </code></pre>
-          </div>
-          <div class="fragment" style="float: right; width: 30%;">
-            <pre style="font-size: 40%;width: 100%;"><code class="python" data-trim data-noescape>
-            from __feature__ import (
-              snake_case, true_property
-            )
-
-            table = QTableWidget()
-            table.column_count = 2
-
-            button = QPushButton("Add")
-            button.enabled = False
-
-            layout = QVBoxLayout()
-            layout.add_widget(table)
-            layout.add_widget(button)
-            layout.spacing = 2
-            </code></pre>
-          </div>
-        </div>
       </section>
 
       <section>

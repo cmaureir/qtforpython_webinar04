@@ -80,7 +80,7 @@
         <h3>Pre-requisites</h3>
         <ul style="font-size: 80%;">
           <li class="fragment">✅ a newer Python version 3.7+</li>
-          <li class="fragment">✅ an isolated virtual enviromnent (recommended)</li>
+          <li class="fragment">✅ an isolated virtual environment (recommended)</li>
           <li class="fragment">❌ Qt installation</li>
         </ul>
       </section>
@@ -96,7 +96,7 @@
         <h3>Installation (Commercial)</h3>
         <img style="width: 60%;" src="img/account_qt_io.png" />
         <pre style="font-size: 40%;width: 70%;"><code class="python" data-trim data-noescape>
-        # Remember to activate the enviroment!
+        # Remember to activate the environment!
         pip install *.whl
         </code></pre>
       </section>
@@ -338,11 +338,13 @@ if __name__ == '__main__':
 
       <section>
         <h3>Widgets designer</h3>
-        <img src="img/designer.png" />
+        <p><code class="qt-yellow bash">pyside6-designer</code></p>
+        <img style="width: 80%;" src="img/designer.png" />
       </section>
 
       <section>
-        <h3>pyside6-project</h3>
+        <h3>Project automation</h3>
+        <p><code class="qt-yellow bash">pyside6-project</code></p>
         <img src="img/pyside6-project.gif" />
       </section>
 
@@ -425,6 +427,16 @@ if __name__ == '__main__':
       </section>
 
       <section>
+        <h3>Bridge to other Python modules (1/2)</h3>
+        <video muted data-autoplay src="videos/pyside_scikitimage.mp4"></video>
+      </section>
+
+      <section>
+        <h3>Bridge to other Python modules (2/2)</h3>
+        <video muted data-autoplay src="videos/pyside_matplotlib.mp4"></video>
+      </section>
+
+      <section>
         <h3>C++ Interaction 🥷</h3>
       </section>
 
@@ -485,26 +497,38 @@ QVariant r = f.call(args);
 
       <section>
         <h3>New package structure (4/4)</h3>
-        <ul>
-          <li>Commercial M2M modules are now an <i class="qt-green">addon wheel</i></li>
+        <ul style="font-size: 80%;">
+          <li>Commercial <i class="qt-blue">M2M modules</i> are now an <i class="qt-green">complementary wheel</i></li>
+          <li class="fragment">Requires <code class="qt-yellow bash">pyside6</code> (essentials + addons)</li>
         </ul>
       </section>
 
       <section>
-        <h3>better QML support</h3>
+        <h3>Better QML support</h3>
+        <ul style="font-size: 80%;">
+          <li class="fragment">Also with <code class="qt-yellow bash">pyside6-project</code></li>
+          <li><code class="qt-yellow bash">@QmlElement</code> and beyond!
+          <ul>
+            <li class="fragment">QmlAnonymous, QmlAttached, QmlExtended, QmlForeign, QmlNamedElement, and QmlUncreatable
+          </ul>
+          </li>
+          <li class="fragment"><code class="qt-green bash">libpysideqml</code> (from libpyside)</li>
+        </ul>
       </section>
 
       <section>
-        <h3>Python compatibility</h3>
-        <div id="left">
-          <ul>
-            <li>5.15.x -> 2.7, 3.5+</li>
+        <h3>Python compatibility 🐍</h3>
+        <div class="fragment" id="left">
+          <p>Qt 5.15 (<i class="qt-yellow">PySide2</i>)</p>
+          <ul style="font-size: 80%;">
+            <li>compatible with 3.5+</li>
           </ul>
         </div>
-        <div id="righ">
-          <ul>
-            <li>6.3 -> 3.6+</li>
-            <li>6.4 -> 3.7+</li>
+        <div class="fragment" id="right">
+          <p>Qt 6.3 (<i class="qt-green">PySide6</i>)</p>
+          <ul style="font-size: 80%;">
+            <li>compatible 3.6+</li>
+            <li class="fragment"><i class="red">but!</i> from 6.4 will be 3.7+</li>
           </ul>
         </div>
       </section>
@@ -554,7 +578,10 @@ QVariant r = f.call(args);
 
       <section>
         <h3>Cross compilation (1/3)</h3>
-        Restrictions
+        <ul style="font-size: 80%;">
+          <li class="fragment">Focused on Raspberry Pi 🥧</li>
+          <li class="fragment">Needs <i class="qt-yellow">Host</i> Linux and <i class="qt-yellow">Target</i> Linux</li>
+        </ul>
       </section>
 
       <section>
@@ -570,25 +597,12 @@ QVariant r = f.call(args);
 
       <section>
         <h3>Cross compilation (3/3)</h3>
-        Doc and more
+        <ul style="font-size: 80%;">
+          <li>Still in progress!!</li>
+          <li><a href="https://doc.qt.io/qtforpython/gettingstarted.html#cross-compilation">doc.qt.io/qtforpython/gettingstarted.html#cross-compilation</a></li>
+        </ul>
       </section>
 
-      <section>
-        <h3>pyside6-project</h3>
-        <img src="img/pyside6-project.gif" />
-      </section>
-
-      <!-- end -->
-
-      <section>
-        <h3>Bridge to other Python modules (1/2)</h3>
-        <video muted data-autoplay src="videos/pyside_scikitimage.mp4"></video>
-      </section>
-
-      <section>
-        <h3>Bridge to other Python modules (2/2)</h3>
-        <video muted data-autoplay src="videos/pyside_matplotlib.mp4"></video>
-      </section>
 
       <section>
         <h2>Future</h2>

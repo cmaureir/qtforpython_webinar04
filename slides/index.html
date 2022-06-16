@@ -78,10 +78,10 @@
 
       <section>
         <h3>Pre-requisites</h3>
-        <ul>
-          <li>✅a newer Python version 3.7+</li>
-          <li>✅an isolated virtual enviromnent.</li>
-          <li>❌Qt installation</li>
+        <ul style="font-size: 80%;">
+          <li class="fragment">✅ a newer Python version 3.7+</li>
+          <li class="fragment">✅ an isolated virtual enviromnent (recommended)</li>
+          <li class="fragment">❌ Qt installation</li>
         </ul>
       </section>
 
@@ -94,87 +94,180 @@
 
       <section>
         <h3>Installation (Commercial)</h3>
-        <img src="img/account_qt_io.png" />
-        <pre style="font-size: 40%;width: 100%;"><code class="python" data-trim data-noescape>
+        <img style="width: 60%;" src="img/account_qt_io.png" />
+        <pre style="font-size: 40%;width: 70%;"><code class="python" data-trim data-noescape>
         # Remember to activate the enviroment!
         pip install *.whl
         </code></pre>
       </section>
 
       <section>
-        <h3>Installation (Other options)</h3>
+        <h3>Installation (Other options) ⬇️</h3>
         <ul>
-          <li>macOS: brew</li>
-          <li>linux: apt, dnf, pacman, etc...</li>
-          <li>all: conda
+          <li class="fragment">Not <i class="qt-yellow">officially</i> supported</li>
+          <li class="fragment"><i class="qt-blue">macOS</i>: brew</li>
+          <li class="fragment"><i class="qt-blue">Linux</i>: apt, dnf, pacman, etc...</li>
+          <li class="fragment"><i class="qt-green">conda</i>, and other python package managers.</li>
         </ul>
       </section>
 
       <section>
-        <h3>What now?</h3>
+        <h3>Everything is installed...</h3>
+        <h3 class="fragment">so <i class="qt-yellow">what</i> now? 🤔</h3>
       </section>
 
       <section>
-        <h3>Qt Creator</h3>
-        <img src="img/qtcreator8.png" />
+        <h3>⚠️</h3>
+        <h3>Make sure the Python <i class="qt-yellow">environment</i> with PySide installed is <i class="red">being used</i></h3>
+      </section>
+
+      <section>
+        <h3>Qt Creator (1/2)</h3>
+        <img style="width: 70%;" src="img/qtcreator8.png" />
+      </section>
+
+      <section>
+        <h3>Qt Creator (2/2)</h3>
+        <video muted data-autoplay style="width: 80%;" src="videos/qtcreator_python.mp4"></video>
       </section>
 
       <section>
         <h3>Other IDEs (1/2)</h3>
-        <img src="img/vscode.png" />
+        <img style="width: 80%;" src="img/vscode.png" />
       </section>
 
       <section>
         <h3>Other IDEs (2/2)</h3>
-        <img src="img/pycharm.png" />
+        <img style="width: 80%;" src="img/pycharm.png" />
       </section>
 
       <section>
-        <h3>Which technology should you use?</h3>
+        <h3>What you get with <i class="qt-green">IDE</i> support? 🙋</h3>
+        <ul style="font-size: 80%;">
+          <li class="fragment">Auto completition</li>
+          <li class="fragment">Type informations (<code class="qt-yellow bash" data-trim data-noescape>.pyi</code> files) - LSP</li>
+          <li class="fragment">linters (<code class="qt-yellow bash" data-trim data-noescape>flake8</code>)</li>
+          <li class="fragment">formatters (<code class="qt-yellow bash" data-trim data-noescape>black, yapf, ...</code>)</li>
+          <li class="fragment">Debugging 🐛</li>
+          <li class="fragment">and more! 🎉</li>
+        </ul>
       </section>
 
       <section>
-        <h3>Qt Quick</h3>
-        <div id="left">
-          <pre style="font-size: 40%;width: 100%;"><code class="python" data-trim data-noescape>
+        <h3>Which <i class="qt-green">Qt technology</i> should you use? 🧐</h3>
+      </section>
+
+      <section>
+        <h3>Qt Quick (1/2)</h3>
+        <ul style="font-size: 80%;">
+          <li class="fragment"><i class="qt-green">Declarative</i> approach</li>
+          <li class="fragment">Popular with mobile applications</li>
+          <li class="fragment">Components that provide a more <i class="red">dynamic app</i> infrastructure</li>
+          <li class="fragment">Augment applications with <code class="qt-yellow bash" data-trim data-noescape>JavaScript</code></li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Qt Quick (2/2)</h3>
+        <div class="container">
+          <div class="fragment" style="float: left; width: 30%;">
+            <pre style="font-size: 40%;width: 100%;"><code class="javascript" data-trim data-noescape>
+              import QtQuick
+
+              Rectangle {
+                id: main
+                width: 200
+                height: 200
+                color: "green"
+
+                Text {
+                  text: "Hello World"
+                  anchors.centerIn: main
+                }
+              }
+            </code></pre>
+          </div>
+          <div class="fragment" style="display: inline-block;width:30%;">
+            <pre style="font-size: 30%;width: 100%;"><code class="python" data-trim data-noescape>
+              import sys
+              from PySide6.QtWidgets import (
+                QApplication
+              )
+              from PySide6.QtQuick import (
+                QQuickView
+              )
+
+              if __name__ == "__main__":
+                  app = QApplication()
+                  view = QQuickView()
+
+                  view.setSource("view.qml")
+                  view.show()
+                  sys.exit(app.exec())
+            </code></pre>
+          </div>
+          <div class="fragment" style="float: right; width: 30%;">
+            <img src="img/quick_hello.png" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Qt Widgets (1/2)</h3>
+        <div id="left70">
+          <ul>
+            <li class="fragment">Initial Qt UI approach 💯</li>
+            <li class="fragment"><i class="qt-yellow">Stable</i>, and widely used</li>
+            <li class="fragment">Focused on <i class="qt-green">desktop</i> applications</li>
+            <li class="fragment">Native look and feel 😌</li>
+          </ul>
+        </div>
+        <div id="right30">
+          <img class="fragment" src="img/kde.png" />
+        </div>
+      </section>
+
+      <section>
+        <h3>Qt Widgets (2/2)</h3>
+        <div class="fragment" id="left">
+          <pre style="font-size: 30%;width: 100%;"><code class="python" data-trim data-noescape>
+import sys
+from PySide6.QtCore import Slot
+from PySide6.QtWidgets import (QLineEdit, QPushButton,
+  QApplication, QVBoxLayout, QDialog)
+
+class Form(QDialog):
+    def __init__(self, parent=None):
+        super(Form, self).__init__(parent)
+        self.edit = QLineEdit("Write my name here")
+        self.button = QPushButton("Show Greetings")
+
+        layout = QVBoxLayout()
+        layout.addWidget(self.edit)
+        layout.addWidget(self.button)
+
+        self.setLayout(layout)
+        self.button.clicked.connect(self.greetings)
+
+    @Slot()
+    def greetings(self):
+        print(f"Hello {self.edit.text()}")
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    form = Form()
+    form.show()
+    sys.exit(app.exec())
           </code></pre>
         </div>
-        <div id="right">
-          <pre style="font-size: 40%;width: 100%;"><code class="python" data-trim data-noescape>
-          </code></pre>
+        <div class="fragment" id="right">
+          <img src="img/widget_hello.py"/>
         </div>
       </section>
 
       <section>
-        <h3>Qt Widgets</h3>
-        <div id="left">
-          <pre style="font-size: 40%;width: 100%;"><code class="python" data-trim data-noescape>
-          </code></pre>
-        </div>
-        <div id="right">
-          <pre style="font-size: 40%;width: 100%;"><code class="python" data-trim data-noescape>
-          </code></pre>
-        </div>
-      </section>
-
-      <section>
-        <h3>Improvements to the processes</h3>
-        Tooling
-      </section>
-
-      <section>
-        <h3>Widgets designer</h3>
-        <img src="img/designer.png" />
-      </section>
-
-      <section>
-        <h3>pyside6-project</h3>
-        <img src="img/pyside6-project.gif" />
-      </section>
-
-      <section>
-        <h3>QtDS</h3>
-        <img src="img/qtds.png" />
+        <h3>That code looks weird</h3>
+        <i class="qt-yellow">Setters/Getters?, camelCase?</i>
       </section>
 
       <section>
@@ -237,8 +330,29 @@
         </div>
       </section>
 
+
       <section>
-        <h3>Compatible with many freezers and compilers</h3>
+        <h3>Improving processes</h3>
+        <i class="qt-green">Tooling</i> 🧰
+      </section>
+
+      <section>
+        <h3>Widgets designer</h3>
+        <img src="img/designer.png" />
+      </section>
+
+      <section>
+        <h3>pyside6-project</h3>
+        <img src="img/pyside6-project.gif" />
+      </section>
+
+      <section>
+        <h3>QtDS</h3>
+        <img style="width: 70%;" src="img/qtds.png" />
+      </section>
+
+      <section>
+        <h3 style="font-size: 90%;">Packaging /freezing/ your application 🥶</h3>
         <table style="font-size: 60%;">
           <thead>
             <tr>
@@ -253,18 +367,9 @@
           </thead>
           <tbody>
             <tr>
-              <td>fbs</td>
-              <td>GPL</td>
-              <td>partial</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-              <td>✅</td>
-            </tr>
-            <tr>
               <td>PyInstaller</td>
               <td>GPL</td>
-              <td>partial</td>
+              <td>✅</td>
               <td>✅</td>
               <td>✅</td>
               <td>✅</td>
@@ -320,9 +425,42 @@
       </section>
 
       <section>
-        <h3>C++ Interaction</h3>
-        scriptable application
-        QtScrypt
+        <h3>C++ Interaction 🥷</h3>
+      </section>
+
+      <section>
+        <h3 style="font-size: 90%;">Extending C++ applications with Python 💫</h3>
+        <video muted data-autoplay src="videos/plugins.mp4"></video>
+      </section>
+
+      <section>
+        <h2>QtScrypt</h2>
+        <div id="left">
+          <ul style="font-size: 80%; margin-top: 10%;">
+            <li class="fragment"><i class="qt-yellow">Inspired</i> by QtScript, <i class="red">not</i> a port</li>
+            <li class="fragment">A <i class="qt-green">dynamic</i> way to interact with Python from C++</li>
+            <li class="fragment">Enabling Python modules within C++ 🐍</li>
+            <li class="fragment"><i class="qt-blue">proof of concept</i></li>
+          </ul>
+        </div>
+        <div class="fragment" id="right">
+          <pre style="font-size: 50%;width: 100%;"><code class="cpp" data-trim data-noescape>
+
+// Simple Engine
+QScryptEngine e;
+e.execute(...);
+QVariant r = e.evaluate(...);
+
+// Load Python module
+QScryptModule mod(...);
+// Get Function Reference
+QScryptFunction f(..., &amp;mod;);
+
+// Call Function
+QVariantList args;
+QVariant r = f.call(args);
+          </code></pre>
+        </div>
       </section>
 
       <section>
@@ -348,7 +486,7 @@
       <section>
         <h3>New package structure (4/4)</h3>
         <ul>
-          <li>M2M Protocol modules wheel</li>
+          <li>Commercial M2M modules are now an <i class="qt-green">addon wheel</i></li>
         </ul>
       </section>
 
